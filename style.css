@@ -1,0 +1,126 @@
+.main-container {
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.h1-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 40px;
+  position: absolute;
+  width: 1012px;
+  height: 45px;
+  left: 120px;
+  top: 56px;
+}
+
+h1 {
+  margin: 0;
+  width: max-content;
+  height: 45px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 112%;
+  color: #ffffff;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.deprevation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 24px;
+
+  position: absolute;
+  width: 126px;
+  height: 408px;
+  left: 119px;
+  top: 154px;
+}
+
+.killed {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  width: 126px;
+  height: 84px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.killed h2 {
+  margin: 0;
+  width: max-content;
+  height: 60px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  color: #ffffff;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.killed p {
+  margin: 0;
+  width: max-content;
+  height: 24px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.map-img {
+  position: absolute;
+  width: 686.42px;
+  height: 457px;
+  left: 385px;
+  top: 141px;
+}
+.play-button {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  left: 1090px;
+  top: 558px;
+  background-color: transparent;
+  z-index: 1;
+}
+.play-arrow {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  left: 1099px;
+  top: 566px;
+  z-index: 2;
+}
+.rectangle {
+  box-sizing: border-box;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  left: 1090px;
+  top: 558px;
+  border: 1px solid #ffffff;
+  z-index: 2;
+}
