@@ -124,3 +124,23 @@ h1 {
   border: 1px solid #ffffff;
   z-index: 2;
 }
+
+.timeline-input {
+  position: absolute;
+  left: 9.38%;
+  right: 9.38%;
+  top: 85.5%;
+  bottom: 14.25%;
+  background: #292929;
+  height: 2px;
+  appearance: none;
+}
+
+.timeline-input::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  background-image: url(Component\ 2.png);
+  background-size: 20px 20px;
+  cursor: pointer;
+  appearance: none;
+}
