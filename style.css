@@ -49,7 +49,7 @@ h1 {
   top: 154px;
 }
 
-.killed {
+.affected {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -61,7 +61,7 @@ h1 {
   order: 0;
   flex-grow: 0;
 }
-.killed h2 {
+.affected h2 {
   margin: 0;
   width: max-content;
   height: 60px;
@@ -75,7 +75,7 @@ h1 {
   order: 0;
   flex-grow: 0;
 }
-.killed p {
+.affected p {
   margin: 0;
   width: max-content;
   height: 24px;
@@ -90,13 +90,14 @@ h1 {
   flex-grow: 0;
 }
 
-.map-img {
+.map-container {
   position: absolute;
   width: 686.42px;
   height: 457px;
   left: 385px;
   top: 141px;
 }
+
 .play-button {
   position: fixed;
   width: 40px;
@@ -128,12 +129,13 @@ h1 {
 .timeline-input {
   position: absolute;
   left: 9.38%;
-  right: 9.38%;
+
   top: 85.5%;
   bottom: 14.25%;
   background: #292929;
   height: 2px;
   appearance: none;
+  width: 1040px;
 }
 
 .timeline-input::-webkit-slider-thumb {
@@ -143,4 +145,12 @@ h1 {
   background-size: 20px 20px;
   cursor: pointer;
   appearance: none;
+}
+
+.dot {
+  background-color: #c00000;
+  position: absolute;
+  width: 2.84px;
+  height: 2.84px;
+  border-radius: 50%;
 }
