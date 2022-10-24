@@ -111,14 +111,38 @@ const showData = (currentDate) => {
 
 const onInputChange = (e) => {
   showData(+e.target.value);
+  document.getElementById('timeline').setAttribute('value', +e.target.value);
+};
+
+const onBtnClick = () => {
+  let img = document.getElementById('play-1');
+  let currentDate = document.getElementById('timeline').value;
+
+  if (img.src.indexOf('images/Play.svg') > -1) {
+    const showIntervalData = () => {
+      showData(currentDate);
+      currentDate = +currentDate + 86400000;
+      document.getElementById('timeline').setAttribute('value', currentDate);
+    };
+    interval = setInterval(showIntervalData, 200);
+    img.setAttribute('src', 'images/Pause.svg');
+  } else {
+    clearInterval(interval);
+    img.setAttribute('src', 'images/Play.svg');
+  }
 };
 
 const onInput = () => {
   const input = document.getElementById('timeline');
+  const playButton = document.getElementById('play-button');
+
   const firstDay = findEarliestDate();
-  input.addEventListener('change', onInputChange);
+  const latestDay = findLatestDate();
+  playButton.addEventListener('click', onBtnClick);
+  input.addEventListener('input', onInputChange);
   input.setAttribute('min', firstDay);
-  input.setAttribute('max', findLatestDate());
+  input.setAttribute('max', latestDay);
+
   showData(firstDay);
 };
 

@@ -37,16 +37,18 @@
       <div class="map-container" id="current">
         <img src="images/map.svg" alt="" class="map-img" />
       </div>
-      <button class="play-button">
-        <img src="images/play_arrow_black.svg" class="play-arrow" />
-        <img src="images/Rectangle 154.svg" class="rectangle" />
+      <button class="button" id="play-button">
+        <img src="images/Play.svg" id="play-1" />
       </button>
-      <input
-        type="range"
-        class="timeline-input"
-        id="timeline"
-        step="86400000"
-      />
+      <div>
+        <div id="bubble"></div>
+        <input
+          type="range"
+          class="timeline-input"
+          id="timeline"
+          step="86400000"
+        />
+      </div>
     </div>
   </body>
   <script src="index.js"></script>

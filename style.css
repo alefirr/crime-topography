@@ -98,22 +98,15 @@ h1 {
   top: 141px;
 }
 
-.play-button {
+.button {
   position: fixed;
   width: 40px;
   height: 40px;
   left: 1090px;
   top: 558px;
   background-color: transparent;
-  z-index: 1;
-}
-.play-arrow {
-  position: fixed;
-  width: 24px;
-  height: 24px;
-  left: 1099px;
-  top: 566px;
-  z-index: 2;
+  border: none;
+  padding: 0;
 }
 .rectangle {
   box-sizing: border-box;
