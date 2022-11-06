@@ -122,7 +122,6 @@ h1 {
 .timeline-input {
   position: absolute;
   left: 9.38%;
-
   top: 85.5%;
   bottom: 14.25%;
   background: #292929;
@@ -141,19 +140,21 @@ h1 {
 }
 
 .bubble {
-  padding-top: 10px;
-  padding-left: 15px;
-
   position: absolute;
-  width: 109px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 8px;
+  width: 108px;
   height: 28px;
   top: 730px;
-
+  box-sizing: border-box;
   background: #222222;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 20px;
   color: #ffffff;
 

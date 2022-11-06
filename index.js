@@ -114,9 +114,11 @@ const setBubble = (input, bubble) => {
   const val = input.value;
   const min = input.min;
   const max = input.max;
-  const percent = Number(((val - min) * 100) / (max - min));
+  const percent = Number(((val - min) / (max - min)) * 1025);
   bubble.textContent = new Date(+val).toLocaleDateString();
-  bubble.style.left = `calc(${percent}% - ${bubble.offsetWidth / 2}px)`;
+  bubble.style.left = `calc(
+    ${percent}px + 60px +
+    ${bubble.offsetWidth / 2}px)`;
 };
 
 const onInputChange = (e, input, bubble) => {
