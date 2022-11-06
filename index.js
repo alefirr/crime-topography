@@ -15,6 +15,7 @@ const parseData = async () => {
       .then((json) => (data = json)),
   ]);
 };
+
 const getDateFormat = (date) => {
   const year = date.getFullYear();
   const month = date.getMonth() + 1;
@@ -109,18 +110,30 @@ const showData = (currentDate) => {
   countAffectedPeople(date);
 };
 
-const onInputChange = (e) => {
-  showData(+e.target.value);
-  document.getElementById('timeline').setAttribute('value', +e.target.value);
+const setBubble = (input, bubble) => {
+  const val = input.value;
+  const min = input.min;
+  const max = input.max;
+  const percent = Number(((val - min) * 100) / (max - min));
+  bubble.textContent = new Date(+val).toLocaleDateString();
+  bubble.style.left = `calc(${percent}% - ${bubble.offsetWidth / 2}px)`;
 };
 
-const onBtnClick = () => {
+const onInputChange = (e, input, bubble) => {
+  showData(+e.target?.value);
+  document.getElementById('timeline').setAttribute('value', +e.target?.value);
+
+  setBubble(input, bubble);
+};
+
+const onBtnClick = (input, bubble) => {
   let img = document.getElementById('play-1');
   let currentDate = document.getElementById('timeline').value;
 
   if (img.src.indexOf('images/Play.svg') > -1) {
     const showIntervalData = () => {
       showData(currentDate);
+      setBubble(input, bubble);
       currentDate = +currentDate + 86400000;
       document.getElementById('timeline').setAttribute('value', currentDate);
     };
@@ -134,16 +147,19 @@ const onBtnClick = () => {
 
 const onInput = () => {
   const input = document.getElementById('timeline');
+  const bubble = document.getElementById('bubble');
   const playButton = document.getElementById('play-button');
 
   const firstDay = findEarliestDate();
   const latestDay = findLatestDate();
-  playButton.addEventListener('click', onBtnClick);
-  input.addEventListener('input', onInputChange);
+  playButton.addEventListener('click', () => onBtnClick(input, bubble));
+
   input.setAttribute('min', firstDay);
   input.setAttribute('max', latestDay);
+  input.addEventListener('input', (e) => onInputChange(e, input, bubble));
 
   showData(firstDay);
+  setBubble(input, bubble);
 };
 
 parseData().then(() => onInput());

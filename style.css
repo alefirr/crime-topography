@@ -140,6 +140,35 @@ h1 {
   appearance: none;
 }
 
+.bubble {
+  padding-top: 10px;
+  padding-left: 15px;
+
+  position: absolute;
+  width: 109px;
+  height: 28px;
+  top: 730px;
+
+  background: #222222;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: #ffffff;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.bubble::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  top: -1px;
+}
+
 .dot {
   background-color: #c00000;
   position: absolute;
